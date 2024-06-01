@@ -1,0 +1,212 @@
+:root {
+    --slider-bg: #191c1f;
+    --slider-thumb: #303539;
+    --slider-track-border: none;
+    --slider-track-bs: none;
+    --slider-thumb-bs: 4px 4px 4px 4px #000000;
+  }
+
+#canvas_container {
+    width: 600px;
+    height: 600px;
+}
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+} button > svg {
+    height: 50px;
+}
+#slider {
+    width: 150px;
+    height: 500px;
+}
+#keymapping {
+    height: 300px;
+}
+
+
+
+
+
+
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    font-family: Arial;
+    width: 75px;
+    height: 75px;
+  }
+  
+.custom-select select {
+    display: none;
+}
+  
+.select-selected {
+    background-color: DodgerBlue;
+}
+  
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+  
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+  
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+  
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: -500;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+  
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+  
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+/* Slider styling */
+input[type=range][orient=vertical] {
+    writing-mode: vertical-lr;
+    direction: rtl;
+    appearance: slider-vertical;
+    width: 16px;
+    height: 300px;
+    vertical-align: bottom;
+    -webkit-appearance: none;
+    background: none;
+}
+
+input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+
+
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+
+    box-shadow: var(--slider-thumb-bg);
+    height: 15px;
+    width: 60px;
+    border-radius: 3px;
+    background: var(--slider-thumb);
+    cursor: pointer;
+
+    margin-left: -26px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  }
+  
+  /* All the same stuff for Firefox */
+  input[type=range]::-moz-range-thumb {
+    box-shadow: var(--slider-thumb-bg);
+    height: 15px;
+    width: 60px;
+    border-radius: 3px;
+    background: var(--slider-thumb);
+    cursor: pointer;
+  }
+  
+  /* All the same stuff for IE */
+  input[type=range]::-ms-thumb {
+    box-shadow: var(--slider-thumb-bg);
+    height: 15px;
+    width: 60px;
+    border-radius: 3px;
+    background: var(--slider-thumb);
+    cursor: pointer;
+  }
+
+
+
+
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 10px;
+    height: 100%;
+    cursor: pointer;
+    box-shadow: var(--slider-track-bg);
+    background: var(--slider-bg);
+    border-radius: 1.3px;
+    border: var(--slider-track-border);
+  }
+  
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: var(--slider-bg);
+  }
+  
+  input[type=range]::-moz-range-track {
+    width: 10px;
+    height: 100%;
+    cursor: pointer;
+    box-shadow: var(--slider-track-bg);
+    background: var(--slider-bg);
+    border-radius: 1.3px;
+    border: var(--slider-track-border);
+  }
+  
+  input[type=range]::-ms-track {
+    width: 10px;
+    height: 100%;
+    cursor: pointer;
+    background: transparent;
+    border: var(--slider-track-border);
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: var(--slider-bg);
+    border: var(--slider-track-border);
+    border-radius: 2.6px;
+    box-shadow: var(--slider-track-bg);
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: var(--slider-bg);
+  }
+  input[type=range]::-ms-fill-upper {
+    background: var(--slider-bg);
+    border: var(--slider-track-border);
+    border-radius: 2.6px;
+    box-shadow: var(--slider-track-bg);
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: var(--slider-bg);
+  }
